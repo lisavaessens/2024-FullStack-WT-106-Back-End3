@@ -1,9 +1,4 @@
-DB_USERNAME=roelvanuytven
-DB_PASSWORD=DaWaTi312917
-DB_HOSTNAME=cinemafullstackdemo.mysql.database.azure.com
-DOCS_URL=/docs
-ALLOWED_ORIGINS="http://localhost,https://localhost,http://127.0.0.1:8080,https://127.0.0.1:8080,https://mysite.netlify.app"
-;link naar netlifyname: Vercel Production Deployment
+name: Vercel Production Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -21,4 +16,4 @@ jobs:
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
-        run: vercel --force deploy --prod --token=${{ secrets.VERCEL_TOKEN }} nog aanpassen
+        run: vercel --force deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
