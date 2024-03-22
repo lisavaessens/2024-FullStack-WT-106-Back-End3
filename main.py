@@ -5,8 +5,6 @@ import config
 
 app = FastAPI()
 
-
-
 origins = config.cors_origins.split(",")
 
 app.add_middleware(
@@ -17,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/test")
 def main():
     return {"message": "Hello World"}
-
